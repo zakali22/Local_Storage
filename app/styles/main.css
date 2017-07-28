@@ -1,87 +1,67 @@
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:200|Poiret+One');
 
-/* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-image: url('http://www.10thkitchen.com/wp-content/uploads/2013/05/DSC_0041w.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 67vh;
+  overflow: hidden;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
+.container {
+  background-color: white;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 350px;
+  padding: 15px;
+  border-radius: 20px;
 }
 
-/* Custom page header */
-.header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
+.container h2 {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+  text-transform: uppercase;
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.container ul {
+  margin-left: 0;
+  margin-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.container ul li {
+  position: relative;
+  left: -35px;
+  display: inline;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+form {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Poiret One', cursive;
+}
+
+a, a:link, a:hover, a:visited {
+  color: white;
+}
+
+.footer i {
+  color: red;
 }
