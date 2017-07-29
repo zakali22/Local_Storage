@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var list = JSON.parse(localStorage.getItem('items')) || [];
   var itemsList = $('.menu-list');
+  // Get the modal
+  var modal = $('#myModal');
 
   populate(list, itemsList);
   $('form').on('submit', function(event) {
@@ -23,6 +25,8 @@ $(document).ready(function() {
         'top': '-=10'
       });
       this.reset();
+    } else {
+      modal.css('display', 'block');
     }
 
   });
@@ -46,4 +50,21 @@ $(document).ready(function() {
     itemsList.html(list);
     console.table(list);
   }
+
+  // When the user clicks on <span> (x), close the modal
+  $('.close').on('click', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    modal.css('display', 'none');
+  });
+
+  // When the user clicks anywhere outside of the modal, close it
+  $('body').on('click', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    if (event.target === modal) {
+      modal.css('display', 'none');
+    }
+  });
+
 });
