@@ -5,7 +5,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 67vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -14,7 +14,7 @@ body {
   display: block;
   width: 400px;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 350px;
   padding: 15px;
   border-radius: 20px;
   box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.3);
@@ -45,6 +45,7 @@ body {
   color: black;
   font-weight: bold;
   font-family: 'Poiret One', cursive;
+  text-transform: capitalize;
 }
 
 .container ul li input {
@@ -104,12 +105,26 @@ form button {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 20px;
   font-size: 25px;
   color: white;
   font-family: 'Poiret One', cursive;
+}
+
+span {
+  margin-top: 7px;
+  float: right;
+  border: 1px solid #18bc9c;
+  padding: 5px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: #18bc9c;
+  font-size: 10px;
 }
 
 a, a:link, a:hover, a:visited {
