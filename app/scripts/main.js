@@ -16,6 +16,16 @@ $(document).ready(function() {
     localStorage.setItem('items', JSON.stringify(list));
     populate(list, itemsList);
     console.log(list);
+    location.reload();
+  });
+
+  $('input').on('click', function(event) {
+    /* Act on the event */
+    var element = event.target;
+    var elementIndex = element.dataset.index;
+    list[elementIndex].done = !list[elementIndex].done;
+    localStorage.setItem('items', JSON.stringify(list));
+    console.log(list);
   });
 
   $('form').on('submit', function(event) {
@@ -44,7 +54,11 @@ $(document).ready(function() {
   function populate(array = [], locationList) {
     var list = array.map(function(plate, index) {
       var output = '<li>';
-      output += '<input type="checkbox" data-index=' + index + ' id="item' + index + '">';
+      if (plate.done) {
+        output += '<input type="checkbox" data-index=' + index + ' id="item' + index + '" checked>';
+      } else {
+        output += '<input type="checkbox" data-index=' + index + ' id="item' + index + '">';
+      }
       output += '<label for="item' + index + '"><p>' + plate.text + '</p></label>';
       output += '<span class="delete">X</span>';
       output += '</li>';
