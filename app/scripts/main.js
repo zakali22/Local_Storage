@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
     /* Act on the event */
     console.log($('.container').height(), $('body').height());
-    if ($('.container').height() < 600) {
+    if ($('.container').height() =< 550) {
       var text = $('form input').val();
       var items = {
         text,
@@ -21,8 +21,7 @@ $(document).ready(function() {
       localStorage.setItem('items', JSON.stringify(list));
       console.table(list);
       $('.container').css({
-        'position': 'relative',
-        'top': '-=10'
+        'margin-bottom': '30px'
       });
       this.reset();
     } else {
@@ -56,15 +55,6 @@ $(document).ready(function() {
     event.preventDefault();
     /* Act on the event */
     modal.css('display', 'none');
-  });
-
-  // When the user clicks anywhere outside of the modal, close it
-  $('body').on('click', function(event) {
-    event.preventDefault();
-    /* Act on the event */
-    if (event.target === modal) {
-      modal.css('display', 'none');
-    }
   });
 
 });
