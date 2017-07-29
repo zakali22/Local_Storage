@@ -169,7 +169,7 @@ a, a:link, a:hover, a:visited {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }

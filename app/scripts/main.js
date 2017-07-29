@@ -5,6 +5,14 @@ $(document).ready(function() {
   var modal = $('#myModal');
 
   populate(list, itemsList);
+  // When the user clicks on <span> (x), close the modal
+  $('.close').on('click', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    modal.css('display', 'none');
+  });
+
+
   $('span').on('click', function(event) {
     event.preventDefault();
     /* Act on the event */
@@ -67,12 +75,5 @@ $(document).ready(function() {
     itemsList.html(list);
     console.table(list);
   }
-
-  // When the user clicks on <span> (x), close the modal
-  $('.close').on('click', function(event) {
-    event.preventDefault();
-    /* Act on the event */
-    modal.css('display', 'none');
-  });
 
 });
