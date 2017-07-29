@@ -3,13 +3,14 @@ $(document).ready(function() {
   var itemsList = $('.menu-list');
   // Get the modal
   var modal = $('#myModal');
+  console.log(location);
 
   populate(list, itemsList);
   $('form').on('submit', function(event) {
     event.preventDefault();
     /* Act on the event */
     console.log($('.container').height(), $('body').height());
-    if ($('.container').height() =< 550) {
+    if ($('.container').height() < 550) {
       var text = $('form input').val();
       var items = {
         text,
@@ -20,9 +21,6 @@ $(document).ready(function() {
       populate(list, itemsList);
       localStorage.setItem('items', JSON.stringify(list));
       console.table(list);
-      $('.container').css({
-        'margin-bottom': '30px'
-      });
       this.reset();
     } else {
       modal.css('display', 'block');
@@ -30,7 +28,7 @@ $(document).ready(function() {
 
   });
 
-  $('.delete').on('click', function(event) {
+  $('span.delete').on('click', function(event) {
     event.preventDefault();
     /* Act on the event */
     console.log(event.target);
@@ -55,6 +53,7 @@ $(document).ready(function() {
     event.preventDefault();
     /* Act on the event */
     modal.css('display', 'none');
+    location.reload();
   });
 
 });
